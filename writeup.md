@@ -32,7 +32,7 @@ The pipeline starts with the conversion of the color image to a gray image. Afte
 After the edges detection, the image is masked with a polygon to obtain the region of interest for the next processing steps.
 Then next processing step is find the lines in the images with the edges.
 
-Then the next processing step is to find the lines in the images with the edges. Therefore the Hough line transform was used. As parameters for the Hough transform a $ \rho $ of 7 and $ \theta $ of 1°.\( \theta \)
+Then the next processing step is to find the lines in the images with the edges. Therefore the Hough line transform was used. As parameters for the Hough transform a $ \rho $ of 7 and $ \theta $ of 1°.``` \theta ```
 Since there are short lane markers, the minimum line length is set to 2, to detect them. The line gap parameter is 10. There are two implementations to draw the lines, the draw_lines and draw_lines_ext. The draw_lines function draws the found lines with Hough transformation into the image. 
 The result of the this drawing functions can be observed in this image:
 ![alt text][image2].
