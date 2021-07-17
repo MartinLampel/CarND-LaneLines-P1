@@ -39,13 +39,28 @@ The result of the this drawing functions can be observed in this image:
 
 The more advantages line drawing happens in the function draw_lines_ext. This function draws instead over multiple lines a single line for the lane. This is done in two steps:
 
-1. segmentation
+1. separation
+For each line segment, the slope and the intercept were computed. In the case a negative slope was computed, the segment is assigned to the left lane. If the slope was positive, it was assigned to the right lane. 
+
+To prevent that a vertical line was wrong assigned, the threshold was at +/- 0.35. For vertical lines, the slope is close to zero. 
+Finally, the mean value of the slope and the intercept are computed from the assigned segments. 
+
 2. linear extrapolation
 
+With the knowledge of the intercept and the slope for each line, we can compute with <img src="https://render.githubusercontent.com/render/math?math=y = slope * x + intercept">. We defined the corner vertices of the polygon and know the range of y coordinates where the lane is. 
+Therefore we can rewrite the previous equation to compute x:
+<img src="https://render.githubusercontent.com/render/math?math= (y - intercept)/slope = x">
 
+For the first video, y lies in the range from 320 to 540. These y coordinates are used to compute the start and end coordinates for x.
+
+With this approach we got for each lane a line as we can see in this image:
+
+![alt text][image3].
 
 ### 2. Identify potential shortcomings with your current pipeline
 
+
+One 
 
 
 
