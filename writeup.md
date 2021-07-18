@@ -21,10 +21,10 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./images_output/edge.png "Edge detection"
+[image1]: ./test_images_output/edge.png "Edge detection"
 The pipeline starts with the conversion of the color image to a gray image. After this step, a gaussian blur filter with a kernel size of 3 is applied to the gray image to remove noise. Then the edges are detected with the Canny edge detection. As threshold values were 60 for the lower and 150 for the upper was chosen. The result of the edge detection works well as we can see in the result:
 
-![alt text](./images_output/edge.png "detection")
+![alt text](./test_images_output/edge.png "detection")
 
 After the edges detection, the image is masked with a polygon to obtain the region of interest for the next processing steps.
 Then next processing step is find the lines in the images with the edges.
