@@ -6,7 +6,7 @@
 Overview
 ---
 
-This is my implemtation of an algorithm to detect lane lines on the road. 
+This is my implemtation of an algorithm to detect lane lines on the road for the Nanodegree Program Self-Driving Car Engineer
 
 
 
