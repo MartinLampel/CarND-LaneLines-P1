@@ -53,7 +53,7 @@ Now we have start and end coordinates of our lane. We use the y component of our
 the left/right lane in each video.
 
 With these two approaches we get following result:
-![alt text](./images_output/lane_detection_with_segmentation.png "Final result of lane detection with segmentation")
+![alt text](./test_images_output/lane_detection_with_segmentation.png "Final result of lane detection with segmentation")
 
 The left image is made with draw_lines function and the right one is made with separation and linear extrapolation. 
 The separation and linear extrapolation works good. 
